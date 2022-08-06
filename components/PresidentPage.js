@@ -8,8 +8,8 @@ function PresidentPage({ soloPresident }) {
                {soloPresident.map((president) => {
                     const { name, portraitLarge } = president;
                     return (
-                         <div className="flex items-center justify-evenly flex-row w-fullmd:px-0">
-                              <div className="w-3/5 h-screen relative">
+                         <div className="flex flex-row w-fullmd:px-0">
+                              <div className="w-full md:w-3/5 h-screen relative">
                                    {/* <img
                                         className="w-full h-screen object-cover object-center"
                                         src={portraitLarge}
@@ -19,11 +19,12 @@ function PresidentPage({ soloPresident }) {
                                         src={portraitLarge}
                                         layout="fill"
                                         objectFit="cover"
+                                        objectPosition="center"
                                         blurDataURL={portraitLarge}
                                         placeholder="blur"
                                    />
                               </div>
-                              <div class="w-full whitespace-pre-line flex items-center justify-center">
+                              <div class="w-0 md:w-full whitespace-pre-line flex items-center">
                                    <PresidentTable president={president} />
                               </div>
                          </div>

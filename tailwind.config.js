@@ -12,6 +12,9 @@ module.exports = {
                screens: {
                     md: "880px",
                },
+               objectPosition: {
+                    "center-top": "center top",
+               },
           },
      },
      plugins: [],
