@@ -8,7 +8,10 @@ function PresidentPage({ soloPresident }) {
                {soloPresident.map((president) => {
                     const { name, portraitLarge } = president;
                     return (
-                         <div className="flex flex-row w-fullmd:px-0">
+                         <div
+                              key={presidentNumber[0]}
+                              className="flex flex-row w-fullmd:px-0"
+                         >
                               <div className="w-full md:w-3/5 h-screen relative">
                                    {/* <img
                                         className="w-full h-screen object-cover object-center"
