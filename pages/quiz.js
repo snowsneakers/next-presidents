@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { useState } from "react";
 
 function Quiz({ presidents }) {
-     console.log(presidents);
+     // console.log(presidents);
      return (
           <>
                <Header />

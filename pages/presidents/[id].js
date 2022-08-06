@@ -18,7 +18,7 @@ function President({ presidents }) {
                     )
                     .join(" ") === id
      );
-     console.log(soloPresident);
+     // console.log(soloPresident);
      return (
           <section className="w-full mx-auto max-h-screen overflow-hidden">
                <Header />
