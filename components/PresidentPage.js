@@ -27,7 +27,7 @@ function PresidentPage({ soloPresident }) {
                                         placeholder="blur"
                                    />
                               </div>
-                              <div class="w-0 md:w-full whitespace-pre-line flex items-center">
+                              <div className="w-0 md:w-full whitespace-pre-line flex items-center">
                                    <PresidentTable president={president} />
                               </div>
                          </div>
