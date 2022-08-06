@@ -6,7 +6,7 @@ function PresidentPage({ soloPresident }) {
      return (
           <section>
                {soloPresident.map((president) => {
-                    const { name, portraitLarge } = president;
+                    const { name, portraitLarge, presidentNumber } = president;
                     return (
                          <div
                               key={presidentNumber[0]}
