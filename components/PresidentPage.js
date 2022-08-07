@@ -44,7 +44,7 @@ function PresidentPage({ soloPresident }) {
                                    />
                               </div>
                               <div
-                                   className="w-full md:w-2/3 min-h-screen flex flex-col items-start justify-start"
+                                   className="w-full md:w-2/3 min-h-screen flex flex-col items-start justify-start overflow-scroll tableContainer"
                                    ref={ref}
                               >
                                    {/* <PresidentTable president={president} /> */}

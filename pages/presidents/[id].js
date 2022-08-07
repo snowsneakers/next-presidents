@@ -22,7 +22,7 @@ function President({ presidents }) {
      return (
           <section className="w-full md:w-[880px] mx-auto max-h-screen">
                <Header />
-               <section className="">
+               <section className="border border-black">
                     <PresidentPage soloPresident={soloPresident} />
                </section>
           </section>
