@@ -4,17 +4,17 @@ function Header() {
      return (
           <header className="w-full flex items-center justify-between p-2 font-medium">
                <Link href="/">
-                    <h1>U.S. Presidents</h1>
+                    <h1 className="cursor-pointer">U.S. Presidents</h1>
                </Link>
                <ul className="flex items-center justify-evenly gap-2">
                     <Link href="/">
-                         <li>Home</li>
+                         <li className="cursor-pointer">Home</li>
                     </Link>
                     <Link href="/presidents">
-                         <li>Presidents</li>
+                         <li className="cursor-pointer">Presidents</li>
                     </Link>
                     <Link href="/quiz">
-                         <li>Quiz</li>
+                         <li className="cursor-pointer">Quiz</li>
                     </Link>
                </ul>
           </header>

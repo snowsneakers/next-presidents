@@ -28,7 +28,9 @@ function PresidentInfo({ president }) {
                               ? "bg-[#B31942]"
                               : president.politicalParty ===
                                 "Democratic-Republican"
-                              ? "bg-gradient-to-r from-[#B31942] to-[#0A3161]"
+                              ? "bg-gradient-to-tr from-[#B31942] to-[#0A3161]"
+                              : president.politicalParty === "Whig"
+                              ? "bg-[#F1BF70] text-black"
                               : "bg-gray-200 text-black"
                     }`}
                     //  president.politicalParty === "Democratic"
@@ -43,8 +45,8 @@ function PresidentInfo({ president }) {
                          ]
                     }
                </h1>
-               <h2>Bio</h2>
-               <div className="w-full bg-gray-200 text-black mb-5 p-2 text-lg">
+               <h2 className="text-2xl font-bold ml-2">About</h2>
+               <div className="w-full bg-gray-200 text-black mb-5 p-2 leading-7">
                     {/* <h1 className="text-4xl md:text-6xl font-bold">
                {president.name.split(" ").length === 2
                     ? president.name.split(" ").join("\n")
@@ -120,13 +122,13 @@ function PresidentInfo({ president }) {
                          .
                     </p>
                </div>
-               <h3>Quote</h3>
-               <div className="w-full bg-gray-200 p-2 mb-5">
-                    <p className="text-center text-xl">{president.quote}</p>
+               <h3 className="text-2xl font-bold ml-2">Quote</h3>
+               <div className="w-full bg-gray-200 p-2 mb-5 leading-7">
+                    <p className="text-center">{president.quote}</p>
                </div>
-               <h4>Fact</h4>
+               <h4 className="text-2xl font-bold ml-2">Fact</h4>
                <div className="w-full bg-gray-200 p-2">
-                    <p className="text-center text-xl">{president.funFact}</p>
+                    <p className="text-center leading-7">{president.funFact}</p>
                </div>
           </>
      );
