@@ -22,7 +22,9 @@ export default function Home({ presidents }) {
                <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 rounded-xl overflow-hidden mb-10">
                     {Object.values(presidents)
                          .filter((president) =>
-                              president.name.toLowerCase().includes(text)
+                              president.name
+                                   .toLowerCase()
+                                   .includes(text.toLowerCase())
                          )
                          .map((president) => {
                               return (

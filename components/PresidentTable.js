@@ -19,13 +19,13 @@ function PresidentTable({ president }) {
      return (
           <>
                <div className="absolute bottom-0 right-0 b flex items-end p-2 md:relative text-md md:text-xl py-5 md:py-0 backdrop-blur md:backdrop-blur-0 bg-black/25 md:bg-transparent text-gray-300 md:text-black rounded-t-xl">
-                    <div>
+                    <div className="w-full md:w-1/2">
                          {/* <h1 className="text-4xl md:text-6xl font-bold">
                               {president.name.split(" ").length === 2
                                    ? president.name.split(" ").join("\n")
                                    : president.name.split(".").join(". \n")}
                          </h1> */}
-                         <p className="w-full md:w-1/2">
+                         <p className="">
                               <span className="font-bold text-xl md:text-4xl">
                                    {president.name}{" "}
                               </span>{" "}
@@ -99,6 +99,14 @@ function PresidentTable({ president }) {
                                    </span>
                               ) : null}
                               .
+                         </p>
+                         <p className="mt-10">
+                              <span className="font-bold">Quote:</span> "
+                              {president.quote}"
+                         </p>
+                         <p>
+                              <span className="font-bold">Fact:</span> "
+                              {president.funFact}"
                          </p>
                     </div>
                </div>
