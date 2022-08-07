@@ -114,11 +114,11 @@ function PresidentInfo({ president }) {
                </div>
                <h3>Quote</h3>
                <div className="w-full bg-gray-200 p-2 mb-5">
-                    <p className="text-center text-xl">"{president.quote}"</p>
+                    <p className="text-center text-xl">{president.quote}</p>
                </div>
                <h4>Fact</h4>
                <div className="w-full bg-gray-200 p-2">
-                    <p className="text-center text-xl">"{president.funFact}"</p>
+                    <p className="text-center text-xl">{president.funFact}</p>
                </div>
           </>
      );
