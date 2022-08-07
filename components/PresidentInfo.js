@@ -21,13 +21,21 @@ function PresidentInfo({ president }) {
      return (
           <>
                <h1
-                    className={
+                    className={`w-full text-[4rem] font-bold uppercase text-gray-100 p-2 text-center mb-5 ${
                          president.politicalParty === "Democratic"
-                              ? "w-full text-[4rem] font-bold uppercase bg-[#0A3161] text-gray-100 p-2 text-center mb-5"
+                              ? "bg-[#0A3161]"
                               : president.politicalParty === "Republican"
-                              ? "w-full text-[4rem] font-bold uppercase bg-[#B31942] text-gray-100 p-2 text-center mb-5"
-                              : "w-full text-[4rem] font-bold uppercase bg-[#FFFFFF] text-black p-2 text-center mb-5"
-                    }
+                              ? "bg-[#B31942]"
+                              : president.politicalParty ===
+                                "Democratic-Republican"
+                              ? "bg-gradient-to-r from-[#B31942] to-[#0A3161]"
+                              : "bg-gray-200 text-black"
+                    }`}
+                    //  president.politicalParty === "Democratic"
+                    //       ? "w-full text-[4rem] font-bold uppercase bg-[#0A3161] text-gray-100 p-2 text-center mb-5"
+                    //       : president.politicalParty === "Republican"
+                    //       ? "w-full text-[4rem] font-bold uppercase bg-[#B31942] text-gray-100 p-2 text-center mb-5"
+                    //       : "w-full text-[4rem] font-bold uppercase bg-[#FFFFFF] text-black p-2 text-center mb-5"
                >
                     {
                          president.name.split(" ")[

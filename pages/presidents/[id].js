@@ -20,7 +20,7 @@ function President({ presidents }) {
      );
      // console.log(soloPresident);
      return (
-          <section className="w-full md:w-[880px] mx-auto max-h-screen overflow-hidden">
+          <section className="w-full md:w-[880px] mx-auto max-h-screen">
                <Header />
                <section className="">
                     <PresidentPage soloPresident={soloPresident} />
