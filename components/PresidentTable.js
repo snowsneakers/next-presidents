@@ -101,12 +101,12 @@ function PresidentTable({ president }) {
                               .
                          </p>
                          <p className="mt-10">
-                              <span className="font-bold">Quote:</span> "
-                              {president.quote}"
+                              <span className="font-bold">Quote:</span>
+                              {president.quote}
                          </p>
                          <p>
-                              <span className="font-bold">Fact:</span> "
-                              {president.funFact}"
+                              <span className="font-bold">Fact:</span>
+                              {president.funFact}
                          </p>
                     </div>
                </div>
