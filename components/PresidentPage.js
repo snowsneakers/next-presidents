@@ -4,6 +4,7 @@ import PresidentTable from "./PresidentTable";
 import PresidentInfo from "./PresidentInfo";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { useRef } from "react";
+import PresidentInfoTable from "./PresidentInfoTable";
 
 function PresidentPage({ soloPresident }) {
      const ref = useRef(null);
@@ -23,7 +24,7 @@ function PresidentPage({ soloPresident }) {
                                         alt={name}
                                    /> */}
                                    <span
-                                        className="md:hidden absolute bottom-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10 text-3xl text-white/30 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                                        className="md:hidden absolute bottom-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10 text-3xl text-white/80 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
                                         onClick={() =>
                                              ref.current?.scrollIntoView({
                                                   behavior: "smooth",
@@ -47,7 +48,8 @@ function PresidentPage({ soloPresident }) {
                                    ref={ref}
                               >
                                    {/* <PresidentTable president={president} /> */}
-                                   <PresidentInfo president={president} />
+                                   {/* <PresidentInfo president={president} /> */}
+                                   <PresidentInfoTable president={president} />
                               </div>
                          </div>
                     );
