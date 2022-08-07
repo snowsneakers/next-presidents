@@ -23,7 +23,7 @@ function PresidentPage({ soloPresident }) {
                                         alt={name}
                                    /> */}
                                    <span
-                                        className="md:hidden absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10 text-3xl backdrop-blur text-white/30 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                                        className="md:hidden absolute bottom-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10 text-3xl text-white/30 hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
                                         onClick={() =>
                                              ref.current?.scrollIntoView({
                                                   behavior: "smooth",
