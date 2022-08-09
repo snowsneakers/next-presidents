@@ -7,7 +7,7 @@ import QuizGame from "../components/QuizGame";
 function Quiz({ presidents }) {
      // console.log(presidents);
      return (
-          <section className="min-h-screen">
+          <section className="min-h-screen w-full md:w-[880px] mx-auto">
                <Header />
                <QuizAbout />
                <QuizGame presidents={presidents} />
