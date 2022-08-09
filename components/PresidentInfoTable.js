@@ -21,7 +21,7 @@ function PresidentInfoTable({ president }) {
      return (
           <>
                <h1
-                    className={`w-full text-[4rem] font-bold uppercase text-gray-100 p-2 text-center mb-5 ${
+                    className={`w-full text-5xl md:text-[4rem] font-bold uppercase text-gray-100 p-2 text-center mb-5 ${
                          president.politicalParty === "Democratic"
                               ? "bg-[#0A3161]"
                               : president.politicalParty === "Republican"
@@ -81,6 +81,14 @@ function PresidentInfoTable({ president }) {
                               </td>
                               <td className="font-light px-6 py-4 whitespace-pre-line">
                                    {president.vicePresident.join("\n")}
+                              </td>
+                         </tr>
+                         <tr className="bg-white border-b">
+                              <td className="font-semibold px-6 py-4 whitespace-pre-line">
+                                   Party
+                              </td>
+                              <td className="font-light px-6 py-4 whitespace-pre-line">
+                                   {president.politicalParty}
                               </td>
                          </tr>
                          <tr className="bg-white border-b">
