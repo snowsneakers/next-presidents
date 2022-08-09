@@ -14,7 +14,7 @@ function QuizAbout() {
                     <p className="">
                          Just enter the amount of questions you want to answer.
                          By default the order is random, but if you check the
-                         "Not Random" box before starting the quiz, Presidents
+                         Not Random box before starting the quiz, Presidents
                          will be in ascending order. All you have to do is
                          choose the right name for the Presidential Portrait.
                          Good Luck!
