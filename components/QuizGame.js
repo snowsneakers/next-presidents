@@ -56,7 +56,7 @@ function QuizGame({ presidents }) {
      };
 
      //  console.log(firstFour);
-     console.log(inOrder);
+     // console.log(inOrder);
 
      return (
           <section className="mt-5">
@@ -85,7 +85,7 @@ function QuizGame({ presidents }) {
                                    name="howMany"
                               />
                               <button
-                                   className="py-1 px-2 bg-red-200 disabled:opacity-50"
+                                   className="py-1 px-2 bg-[#B31942] disabled:opacity-50 font-semibold text-white"
                                    type="submit"
                                    disabled={questionAmount.length < 1}
                               >
