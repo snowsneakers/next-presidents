@@ -38,7 +38,9 @@ function PresidentInfoTable({ president }) {
                          ? president.name.split(" ")[1] +
                            " " +
                            president.name.split(" ")[2]
-                         : president.name.split(" ")[1]}
+                         : president.name.split(" ")[
+                                president.name.split(" ").length - 1
+                           ]}
                </h1>
                <table className="min-w-full mb-5">
                     {/* <thead>
