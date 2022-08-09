@@ -1,14 +1,17 @@
 import React from "react";
 import Header from "../components/Header";
 import { useState } from "react";
+import QuizAbout from "../components/QuizAbout";
+import QuizGame from "../components/QuizGame";
 
 function Quiz({ presidents }) {
      // console.log(presidents);
      return (
-          <>
+          <section className="min-h-screen">
                <Header />
-               <h1></h1>
-          </>
+               <QuizAbout />
+               <QuizGame presidents={presidents} />
+          </section>
      );
 }
 
