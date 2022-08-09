@@ -134,7 +134,7 @@ function PresidentInfoTable({ president }) {
                                    Quote
                               </td>
                               <td className="font-light px-6 py-4 whitespace-pre-line">
-                                   {president.quote}
+                                   "{president.quote}"
                               </td>
                          </tr>
                          <tr className="bg-white border-b">

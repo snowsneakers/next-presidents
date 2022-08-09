@@ -12,8 +12,8 @@ function Welcome({ presidents }) {
 
      return (
           <section>
-               <section className="flex items-center justify-center">
-                    <div className="w-2/3">
+               <section className="flex flex-col md:flex-row items-center justify-center">
+                    <div className="w-full md:w-2/3 mb-2 md:mb-0">
                          <h1 className="text-3xl font-bold mb-2">Welcome!</h1>
 
                          <p className="mb-2">
@@ -32,7 +32,7 @@ function Welcome({ presidents }) {
                               -wikipedia
                          </p>
                     </div>
-                    <div className="w-1/3 flex items-center justify-center">
+                    <div className="w-full md:w-1/3 flex items-center justify-center">
                          <div className="w-[200px] h-[200px] relative">
                               <Image
                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/1024px-Seal_of_the_President_of_the_United_States.svg.png"
