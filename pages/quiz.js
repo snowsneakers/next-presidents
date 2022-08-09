@@ -9,7 +9,7 @@ function Quiz({ presidents }) {
      return (
           <section className="min-h-screen w-full md:w-[880px] mx-auto">
                <Header />
-               <div className="px-5 md:px-0">
+               <div className="px-5 md:px-0 my-5">
                     <QuizAbout />
                     <QuizGame presidents={presidents} />
                </div>

@@ -6,8 +6,9 @@ function QuizGame({ presidents }) {
      const [showScore, setShowScore] = useState(false);
      const [score, setScore] = useState(0);
      const [start, setStart] = useState(true);
+     const [inOrder, setInOrder] = useState(false);
      const [question, setQuestion] = useState(
-          Math.floor(Math.random() * (44 - 0 + 1) + 0)
+          inOrder ? 0 : Math.floor(Math.random() * (44 - 0 + 1) + 0)
      );
      const [questionNum, setQuestionNum] = useState(1);
      const [questionAmount, setQuestionAmount] = useState("");
@@ -23,7 +24,11 @@ function QuizGame({ presidents }) {
                setScore((prevState) => prevState + 1);
           }
           if (questionNum < questionAmount) {
-               setQuestion(Math.floor(Math.random() * (44 - 0 + 1) + 0));
+               setQuestion(
+                    inOrder
+                         ? question + 1
+                         : Math.floor(Math.random() * (44 - 0 + 1) + 0)
+               );
                setQuestionNum((prevState) => prevState + 1);
           } else {
                setShowScore(true);
@@ -34,7 +39,9 @@ function QuizGame({ presidents }) {
      const startQuiz = () => {
           setScore(0);
           setShowScore(false);
-          setQuestion(Math.floor(Math.random() * (44 - 0 + 1) + 0));
+          setQuestion(
+               inOrder ? 0 : Math.floor(Math.random() * (44 - 0 + 1) + 0)
+          );
           setStart(false);
           setQuestionNum(1);
      };
@@ -42,13 +49,14 @@ function QuizGame({ presidents }) {
      const resetQuiz = () => {
           setScore(0);
           setShowScore(false);
-          setQuestion(Math.floor(Math.random() * (44 - 0 + 1) + 0));
           setStart(true);
           setQuestionAmount("");
           setQuestionNum(1);
+          setInOrder(false);
      };
 
      //  console.log(firstFour);
+     console.log(inOrder);
 
      return (
           <section className="mt-5">
@@ -58,28 +66,42 @@ function QuizGame({ presidents }) {
                /> */}
                {start ? (
                     <div className="mt-5 min-h-[269px] rounded-md">
-                         <label
-                              className="block text-3xl font-bold mb-2"
-                              htmlFor="howMany"
-                         >
-                              How Many Questions
-                         </label>
-                         <input
-                              className="border p-1"
-                              type="number"
-                              placeholder="1"
-                              onChange={(e) =>
-                                   setQuestionAmount(+e.target.value)
-                              }
-                              name="howMany"
-                         />
-                         <button
-                              className="py-1 px-2 bg-red-200 disabled:opacity-50"
-                              onClick={startQuiz}
-                              disabled={questionAmount.length < 1}
-                         >
-                              Start
-                         </button>
+                         <form onSubmit={startQuiz}>
+                              <label
+                                   className="block text-3xl font-bold mb-2"
+                                   htmlFor="howMany"
+                              >
+                                   How Many Questions
+                              </label>
+                              <input
+                                   className="border p-1"
+                                   type="number"
+                                   placeholder="1"
+                                   min="1"
+                                   max="45"
+                                   onChange={(e) =>
+                                        setQuestionAmount(+e.target.value)
+                                   }
+                                   name="howMany"
+                              />
+                              <button
+                                   className="py-1 px-2 bg-red-200 disabled:opacity-50"
+                                   type="submit"
+                                   disabled={questionAmount.length < 1}
+                              >
+                                   Start
+                              </button>
+                         </form>
+                         <div className="flex items-center gap-2">
+                              <label htmlFor="order">Not Random</label>
+                              <input
+                                   type="checkbox"
+                                   name="order"
+                                   onChange={() =>
+                                        setInOrder((prevState) => !prevState)
+                                   }
+                              />
+                         </div>
                     </div>
                ) : (
                     <div className="min-h-[269px] flex flex-col-reverse md:flex-row items-center justify-evenly rounded-md">
