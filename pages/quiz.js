@@ -9,8 +9,10 @@ function Quiz({ presidents }) {
      return (
           <section className="min-h-screen w-full md:w-[880px] mx-auto">
                <Header />
-               <QuizAbout />
-               <QuizGame presidents={presidents} />
+               <div className="px-5 md:px-0">
+                    <QuizAbout />
+                    <QuizGame presidents={presidents} />
+               </div>
           </section>
      );
 }
