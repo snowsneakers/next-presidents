@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import PresidentPage from "../../components/PresidentPage";
 import Header from "../../components/Header";
+import { motion } from "framer-motion";
 
 function President({ presidents }) {
      const router = useRouter();
@@ -20,12 +21,16 @@ function President({ presidents }) {
      );
      // console.log(soloPresident);
      return (
-          <section className="w-full md:w-[880px] mx-auto max-h-screen">
+          <motion.section
+               className="w-full md:w-[880px] mx-auto max-h-screen"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+          >
                <Header />
                <section className="">
                     <PresidentPage soloPresident={soloPresident} />
                </section>
-          </section>
+          </motion.section>
      );
 }
 

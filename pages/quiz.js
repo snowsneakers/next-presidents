@@ -3,17 +3,22 @@ import Header from "../components/Header";
 import { useState } from "react";
 import QuizAbout from "../components/QuizAbout";
 import QuizGame from "../components/QuizGame";
+import { motion } from "framer-motion";
 
 function Quiz({ presidents }) {
      // console.log(presidents);
      return (
-          <section className="min-h-screen w-full md:w-[880px] mx-auto">
+          <motion.section
+               className="min-h-screen w-full md:w-[880px] mx-auto"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+          >
                <Header />
                <div className="px-5 md:px-0 my-5">
                     <QuizAbout />
                     <QuizGame presidents={presidents} />
                </div>
-          </section>
+          </motion.section>
      );
 }
 

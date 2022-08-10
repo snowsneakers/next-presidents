@@ -12,7 +12,7 @@ function Welcome({ presidents }) {
 
      return (
           <section>
-               <section className="flex flex-col md:flex-row items-center justify-center">
+               <section className="flex flex-col md:flex-row items-center justify-center mb-5">
                     <div className="w-full md:w-2/3 mb-2 md:mb-0">
                          <h1 className="text-3xl font-bold mb-2">Welcome!</h1>
 
@@ -28,8 +28,7 @@ function Welcome({ presidents }) {
                               executive branch of the federal government and is
                               the commander-in-chief of the United States Armed
                               Forces. Since the office was established in 1789,
-                              45 men have served in 46 presidencies.""
-                              -wikipedia
+                              45 men have served in 46 presidencies." -wikipedia
                          </p>
                     </div>
                     <div className="w-full md:w-1/3 flex items-center justify-center">
@@ -44,7 +43,7 @@ function Welcome({ presidents }) {
                          </div>
                     </div>
                </section>
-               <div className="flex items-center justify-center gap-2 text-white my-5">
+               {/* <div className="flex items-center justify-center gap-2 text-white my-5">
                     <Link href="/quiz">
                          <button className="py-1 px-2 bg-[#0A3161] rounded font-semibold">
                               Quiz
@@ -55,7 +54,7 @@ function Welcome({ presidents }) {
                               Learn
                          </button>
                     </Link>
-               </div>
+               </div> */}
                <div className="">
                     <h2 className="text-2xl font-bold">Search For President</h2>
                </div>

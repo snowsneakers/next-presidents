@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home({ presidents }) {
      // console.log(Object.values(presidents));
@@ -8,7 +9,11 @@ export default function Home({ presidents }) {
      const [text, setText] = useState("");
 
      return (
-          <section className="w-full md:w-[880px] mx-auto">
+          <motion.section
+               className="w-full md:w-[880px] mx-auto"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+          >
                <Header />
                <div className="w-full flex items-center justify-center px-5">
                     <input
@@ -37,7 +42,7 @@ export default function Home({ presidents }) {
                               );
                          })}
                </section>
-          </section>
+          </motion.section>
      );
 }
 

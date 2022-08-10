@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import President from "./presidents/[id]";
 import Welcome from "../components/Welcome";
+import { motion } from "framer-motion";
 
 function Home({ presidents }) {
      const [searchText, setSearchText] = useState(null);
@@ -13,12 +14,16 @@ function Home({ presidents }) {
      }));
 
      return (
-          <section className="w-full md:w-[880px] mx-auto">
+          <motion.section
+               className="w-full md:w-[880px] mx-auto"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+          >
                <Header />
                <section className="w-full md:w-[880px] px-5 my-5">
                     <Welcome presidents={presidents} />
                </section>
-          </section>
+          </motion.section>
      );
 }
 
